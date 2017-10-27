@@ -91,6 +91,13 @@
 		compatible = "brcm,bcm4356-bt";
 		brcm,bt-reset-gpio = <&gpio2 4 0>;
 	};
+
+	firmware {
+		optee {
+			compatible = "linaro,optee-tz";
+			method = "smc";
+		};
+	};
 };
 
 &ehci {
