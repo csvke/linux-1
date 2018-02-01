@@ -4,16 +4,16 @@
 
 TARGET := gfx2d
 
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include			\
-		-I$(srctree)/drivers/sdk/msp-api/$(TARGET)/include	\
-		-I$(srctree)/drivers/msp/$(TARGET)		\
-		-I$(srctree)/drivers/msp/$(TARGET)/hwc		\
-		-I$(srctree)/drivers/common/mmz			\
-		-I$(srctree)/drivers/msp/jpeg/grc_cmm_inc
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/$(TARGET)/include \
+		-I$(srctree)/drivers/hisilicon/msp/$(TARGET) \
+		-I$(srctree)/drivers/hisilicon/msp/$(TARGET)/hwc \
+		-I$(srctree)/drivers/hisilicon/common/mmz \
+		-I$(srctree)/drivers/hisilicon/msp/jpeg/grc_cmm_inc
 
 EXTRA_CFLAGS += -Werror
 EXTRA_CFLAGS += -DCONFIG_GFX_STB_SDK

@@ -5,14 +5,14 @@
 ## header search path
 
 EXTRA_CFLAGS := -Werror
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include \
-		-I$(srctree)/drivers/common/include \
-		-I$(srctree)/drivers/common \
-		-I$(srctree)/drivers/common/mmz \
-		-I$(srctree)/drivers/msp/include \
-		-I$(srctree)/drivers/sdk/msp-api/include \
-		-I$(srctree)/drivers/sdk/msp-api/tde/include \
-		-I$(srctree)/drivers/sdk/msp-include
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/common \
+		-I$(srctree)/drivers/hisilicon/common/mmz \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/tde/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include
 EXTRA_CFLAGS += -DCFG_HI_LOG_LEVEL=4
 
 MOD_NAME_CMN   := hi_common

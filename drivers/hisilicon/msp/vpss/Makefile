@@ -1,15 +1,15 @@
 #===============================================================================
 # local variables
 #===============================================================================
-VPSS_DIR := $(srctree)/drivers/msp/vpss
+VPSS_DIR := $(srctree)/drivers/hisilicon/msp/vpss
 
 EXTRA_CFLAGS += -Werror
 
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include
 
 
 MOD_NAME := hi_vpss

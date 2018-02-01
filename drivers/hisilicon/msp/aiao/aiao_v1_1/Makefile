@@ -1,23 +1,23 @@
 #===============================================================================
 # local variables
 #===============================================================================
-ADSP_DRV_INCLUDE := $(srctree)/drivers/msp/adsp/adsp_v1_1/include
+ADSP_DRV_INCLUDE := $(srctree)/drivers/hisilicon/msp/adsp/adsp_v1_1/include
 
 EXTRA_CFLAGS += -Werror
 
 EXTRA_CFLAGS += \
-		-I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include			\
-		-I$(srctree)/drivers/sdk/msp-api/higo/include		\
+		-I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/higo/include \
 		-I$(ADSP_DRV_INCLUDE)
 
 #COMMON include
-EXTRA_CFLAGS += -I$(srctree)/drivers/msp/aiao/aiao_v1_1/common/include
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/msp/aiao/aiao_v1_1/common/include
 #AO include
-EXTRA_CFLAGS += -I$(srctree)/drivers/msp/aiao/aiao_v1_1/ao
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/msp/aiao/aiao_v1_1/ao
 
 #===============================================================================
 # HI_SND_DRV_SUSPEND_SUPPORT : suspend & resume driver
@@ -59,12 +59,12 @@ endif
 #===============================================================================
 
 EXTRA_CFLAGS += -DHI_AIAO_TIMER_SUPPORT
-EXTRA_CFLAGS += -I$(srctree)/drivers/msp/aiao/aiao_v1_1/timer
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/msp/aiao/aiao_v1_1/timer
 $(MOD_NAME)-y += timer/drv_timer.o
 #===============================================================================
 # AI SUPPORT(optional)
 EXTRA_CFLAGS += -DHI_AUDIO_AI_SUPPORT
-EXTRA_CFLAGS += -I$(srctree)/drivers/msp/aiao/aiao_v1_1/ai
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/msp/aiao/aiao_v1_1/ai
 $(MOD_NAME)-y += \
 		ai/drv_ai_intf.o \
 		ai/drv_ai.o
@@ -73,7 +73,7 @@ $(MOD_NAME)-y += \
 EXTRA_CFLAGS += -DHI_ALSA_AO_SUPPORT
 EXTRA_CFLAGS += -DHI_ALSA_HRTIMER_SUPPORT
 ALSA_DIR = alsa/dsp_mix_v2
-EXTRA_CFLAGS += -I$(srctree)/drivers/msp/aiao/aiao_v1_1/$(ALSA_DIR)
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/msp/aiao/aiao_v1_1/$(ALSA_DIR)
 $(MOD_NAME)-y += \
 		$(ALSA_DIR)/hiaiao_card.o \
 		$(ALSA_DIR)/hiaiao_dma.o \

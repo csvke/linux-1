@@ -1,14 +1,14 @@
 #===============================================================================
 # local variables
 #===============================================================================
-MP3DEC_DIR = $(srctree)/drivers/msp/adec/adec_v1_1/mp3dec
+MP3DEC_DIR = $(srctree)/drivers/hisilicon/msp/adec/adec_v1_1/mp3dec
 
 EXTRA_CFLAGS := -Werror
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include			\
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
 		-I$(MP3DEC_DIR)				\
 		-I$(MP3DEC_DIR)/mp3dec_core/src		     \
 		-I$(MP3DEC_DIR)/mp3dec_core/include	     \
@@ -25,7 +25,7 @@ EXTRA_CFLAGS += -DINTERLEAVED_OUTPUT
 EXTRA_CFLAGS += $(shell [ $(cc-version) -ge 0700 ] &&			\
 				echo "-Wno-format-truncation")
 
-HI_DRV_DIR := $(srctree)/drivers/msp
+HI_DRV_DIR := $(srctree)/drivers/hisilicon/msp
 
 MOD_NAME := hi_adec
 

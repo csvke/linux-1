@@ -5,15 +5,15 @@
 EXTRA_CFLAGS += -Werror -Wno-error=format-security
 
 EXTRA_CFLAGS += \
-	-I$(srctree)/drivers/sdk/common-include \
-	-I$(srctree)/drivers/common/include \
-	-I$(srctree)/drivers/sdk/msp-include	\
-	-I$(srctree)/drivers/sdk/msp-api/include	\
-	-I$(srctree)/drivers/msp/include
+	-I$(srctree)/drivers/hisilicon/sdk/common-include \
+	-I$(srctree)/drivers/hisilicon/common/include \
+	-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+	-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+	-I$(srctree)/drivers/hisilicon/msp/include
 
 HIFIDIR := ./hifi
 
-ADSP_DIR := $(srctree)/drivers/msp/adsp/adsp_v1_1
+ADSP_DIR := $(srctree)/drivers/hisilicon/msp/adsp/adsp_v1_1
 
 EXTRA_CFLAGS += \
 	-I$(ADSP_DIR) \

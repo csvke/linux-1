@@ -10,8 +10,8 @@ export CONFIG_KDS CONFIG_MALI_MIDGARD CONFIG_MALI_GATOR_SUPPORT
 export CONFIG_MALI_PLATFORM_DEVICETREE CONFIG_MALI_TRACE_TIMELINE CONFIG_MALI_DEBUG
 export CONFIG_MALI_DEVFREQ
 
-subdir-ccflags-y += -I$(srctree)/drivers/msp/gpu/mali700/include                   \
-                    -I$(srctree)/drivers/msp/gpu/mali700/drivers/gpu/arm/midgard
+subdir-ccflags-y += -I$(srctree)/drivers/hisilicon/msp/gpu/mali700/include \
+                    -I$(srctree)/drivers/hisilicon/msp/gpu/mali700/drivers/gpu/arm/midgard
 
 subdir-ccflags-y += -DCONFIG_KDS -DCONFIG_MALI_GATOR_SUPPORT \
 		    -DCONFIG_MALI_PLATFORM_DEVICETREE \

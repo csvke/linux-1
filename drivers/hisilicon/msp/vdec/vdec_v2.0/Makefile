@@ -3,15 +3,15 @@
 #===============================================================================
 EXTRA_CFLAGS += -Werror
 
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include			\
-		-I$(srctree)/drivers/msp/vdec/vdec_v2.0		\
-		-I$(srctree)/drivers/msp/vfmw/vfmw_v5.0/adapter	\
-		-I$(srctree)/drivers/msp/vfmw/vfmw_v5.0 \
-		-I$(srctree)/drivers/msp/omxvdec/omxvdec_v2.0
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/msp/vdec/vdec_v2.0 \
+		-I$(srctree)/drivers/hisilicon/msp/vfmw/vfmw_v5.0/adapter \
+		-I$(srctree)/drivers/hisilicon/msp/vfmw/vfmw_v5.0 \
+		-I$(srctree)/drivers/hisilicon/msp/omxvdec/omxvdec_v2.0
 
 EXTRA_CFLAGS += -DANDROID
 

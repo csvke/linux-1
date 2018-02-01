@@ -6,13 +6,13 @@ TARGET := jpeg
 #===============================================================================
 # local variables
 #===============================================================================
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/msp/include			\
-		-I$(srctree)/drivers/msp/$(TARGET)/include	\
-		-I$(srctree)/drivers/msp/$(TARGET)/src
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/msp/$(TARGET)/include \
+		-I$(srctree)/drivers/hisilicon/msp/$(TARGET)/src
 
-EXTRA_CFLAGS += -I$(srctree)/drivers/msp/$(TARGET)/grc_cmm_inc
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/msp/$(TARGET)/grc_cmm_inc
 
 EXTRA_CFLAGS += -Werror
 

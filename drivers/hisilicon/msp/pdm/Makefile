@@ -3,16 +3,16 @@
 #===============================================================================
 EXTRA_CFLAGS += -Werror
 
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include			\
-		-I$(srctree)/drivers/sdk/ha_codec-include	\
-		-I$(srctree)/drivers/msp/pdm/db			\
-		-I$(srctree)/drivers/sdk/msp-api/higo/include		\
-		-I$(srctree)/drivers/common/sys			\
-		-I$(srctree)/drivers/common/mmz
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/sdk/ha_codec-include \
+		-I$(srctree)/drivers/hisilicon/msp/pdm/db \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/higo/include \
+		-I$(srctree)/drivers/hisilicon/common/sys \
+		-I$(srctree)/drivers/hisilicon/common/mmz
 
 MOD_NAME := hi_pdm
 

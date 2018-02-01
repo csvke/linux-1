@@ -46,7 +46,7 @@
 #include "drv_gpio_ext.h"
 #include "drv_gpio.h"
 
-#include "../../gpio/gpiolib.h"
+#include "../../../gpio/gpiolib.h"
 
 #define	 GPIO_MAX_BUF ARCH_NR_GPIOS
 #define	 GPIO_BUF_HEAD g_stGpioAttr.GpioIrqList[g_stGpioAttr.Head]

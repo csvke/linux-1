@@ -3,16 +3,16 @@
 #===============================================================================
 EXTRA_CFLAGS += -Werror
 
-EXTRA_CFLAGS += -I$(srctree)/drivers/sdk/common-include			\
-		-I$(srctree)/drivers/common/include			\
-		-I$(srctree)/drivers/sdk/msp-include			\
-		-I$(srctree)/drivers/sdk/msp-api/include			\
-		-I$(srctree)/drivers/msp/include			\
-		-I$(srctree)/drivers/sdk/msp-api/higo/include		\
-		-I$(srctree)/drivers/sdk/msp-api/tde/include		\
-		-I$(srctree)/drivers/sdk/msp-api/jpge/include		\
-		-I$(srctree)/drivers/msp/jpge/include		\
-		-I$(srctree)/drivers/msp/adsp/adsp_v1_1/include
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisilicon/sdk/common-include \
+		-I$(srctree)/drivers/hisilicon/common/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/include \
+		-I$(srctree)/drivers/hisilicon/msp/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/higo/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/tde/include \
+		-I$(srctree)/drivers/hisilicon/sdk/msp-api/jpge/include \
+		-I$(srctree)/drivers/hisilicon/msp/jpge/include \
+		-I$(srctree)/drivers/hisilicon/msp/adsp/adsp_v1_1/include
 
 EXTRA_CFLAGS += -DHI_OMX_SUPPORT
 
