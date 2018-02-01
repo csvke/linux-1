@@ -1,0 +1,5 @@
+config HISILICON_VENDOR
+	bool "HiSilicon vendor drivers support"
+	help
+	  It includes HiSilicon vendor drivers to support multimedia
+	  functions like graphic, audio, video etc.
