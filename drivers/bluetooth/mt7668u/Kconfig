@@ -1,0 +1,5 @@
+config BT_MT7668U
+	tristate "MediaTek MT7668U (USB) support"
+	depends on USB
+	---help---
+	  This adds support for MT7668U-based USB bluetooth module.
