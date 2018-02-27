@@ -70,6 +70,7 @@
 *                    E X T E R N A L   R E F E R E N C E S
 ********************************************************************************
 */
+#include <linux/reboot.h>
 #include "gl_os.h"
 #include "debug.h"
 #include "wlan_lib.h"
@@ -478,6 +479,14 @@ static const struct wiphy_wowlan_support mtk_wlan_wowlan_support = {
 };
 #endif
 
+
+static int mtk_reboot_callback(struct notifier_block *this, unsigned long code, void *unused);
+static struct notifier_block mtk_reboot_notifier = {
+        .notifier_call = mtk_reboot_callback,
+        .priority = 1,
+};
+
+static int is_reboot;
 /*******************************************************************************
 *                                 M A C R O S
 ********************************************************************************
@@ -2840,6 +2849,8 @@ static int initWlan(void)
 		return ret;
 	}
 
+	register_reboot_notifier(&mtk_reboot_notifier);
+
 	return ret;
 }				/* end of initWlan() */
 
@@ -2867,6 +2878,7 @@ static VOID exitWlan(void)
 	procUninitProcFs();
 #endif
 	DBGLOG(INIT, INFO, "exitWlan\n");
+	unregister_reboot_notifier(&mtk_reboot_notifier);
 
 }				/* end of exitWlan() */
 
@@ -2894,3 +2906,12 @@ module_init(initWlan);
 module_exit(exitWlan);
 
 #endif
+static int mtk_reboot_callback(struct notifier_block *this, unsigned long code, void *unused)
+{
+	printk("%s: code = %ld\n", __FUNCTION__, code);
+	if (code == SYS_RESTART) {
+		is_reboot = code;
+		//exitWlan();
+	}
+	return NOTIFY_DONE;
+}
