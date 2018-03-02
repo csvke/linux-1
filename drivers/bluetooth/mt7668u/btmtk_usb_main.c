@@ -170,7 +170,7 @@ static int hci_event_snoop_index = HCI_SNOOP_ENTRY_NUM - 1;
 static int hci_acl_snoop_index = HCI_SNOOP_ENTRY_NUM - 1;
 
 static dev_t g_devIDfwlog;
-u8 btmtk_log_lvl = BTMTK_LOG_LEVEL_WARNING;
+u8 btmtk_log_lvl = BTMTK_LOG_LEVEL_DEFAULT;
 
 const struct file_operations BT_fops = {
 	.open = btmtk_usb_fops_open,
