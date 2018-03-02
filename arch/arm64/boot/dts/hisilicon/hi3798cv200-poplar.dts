@@ -91,6 +91,11 @@
 		compatible = "brcm,bcm4356-bt";
 		brcm,bt-reset-gpio = <&gpio2 4 0>;
 	};
+
+	wifi_mt7668 {
+		compatible = "mtk,mt7668-wifi";
+		mtk,wifi-reset-gpio = <&gpio2 1 0>;
+	};
 };
 
 &ehci {
