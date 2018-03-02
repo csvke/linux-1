@@ -202,19 +202,8 @@ source "drivers/hwtracing/intel_th/Kconfig"
 
 source "drivers/fpga/Kconfig"
 
-<<<<<<< HEAD
 source "drivers/hisilicon/Kconfig"
-=======
-source "drivers/tee/Kconfig"
 
-menu "Hisilicon Poplar support"
-config POPLAR_MSP
-	bool "Enable support for common and MSP code"
-	default yes
-	help
-	  Include common and MSP code to support the HiSilicon
-	  Poplar board.
-endmenu
->>>>>>> 53ee998... tee: generic TEE subsystem
+source "drivers/tee/Kconfig"
 
 endmenu
