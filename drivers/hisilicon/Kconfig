@@ -3,3 +3,7 @@ config HISILICON_VENDOR
 	help
 	  It includes HiSilicon vendor drivers to support multimedia
 	  functions like graphic, audio, video etc.
+
+config HISI_WIFI_POWER
+        tristate "Hisilicon WiFi power control"
+        default n
