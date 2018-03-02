@@ -3,6 +3,7 @@ config MT7668
 	depends on MAC80211
 	select CFG80211_WEXT
 	select WEXT_CORE
+	select HISI_WIFI_POWER
 	---help---
 	  This adds support for MT7668-based wireless module.
 
