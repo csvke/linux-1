@@ -90,6 +90,7 @@
 	bt_bcm4356 {
 		compatible = "brcm,bcm4356-bt";
 		brcm,bt-reset-gpio = <&gpio2 4 0>;
+	};
 
 	firmware {
 		optee {
